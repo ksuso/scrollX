@@ -1,0 +1,19 @@
+@if $include-img == true {
+
+%img {
+    min-height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img {
+    @extend %img;
+    width: $width;
+}
+.img--small {
+    @extend %img;
+    min-width: $min-width;
+}
+
+}

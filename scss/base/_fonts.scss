@@ -1,0 +1,22 @@
+@if $include-fonts == true {
+
+@font-face {
+   font-family: principal;
+   font-display: swap;
+   src: local(BaskervilleBT),
+    url(../typo/BaskervilleBT.woff2);
+}
+@font-face {
+   font-family: secondary;
+   font-display: swap;
+   src: local(POORICH),
+    url(../typo/POORICH.woff2);
+}
+@font-face {
+   font-family: complementary;
+   font-display: swap;
+   src: local(Belove),
+    url(../typo/Belove.woff2);
+}
+
+}

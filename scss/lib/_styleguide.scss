@@ -1,0 +1,293 @@
+@if $include-styleguide == true {
+
+   header div.flex--end {
+      font-size: 2.5em;
+      color: $color-grey;
+      position: absolute;
+      top: 2%;
+      right: 2%;
+   }
+   header div.flex--end::after {
+      content: "";
+      width: 140%;
+      border-bottom: $border-width $border-style $color-grey;
+      position: absolute;
+      bottom: -10px;
+   }
+   h2::after {
+      content: "";
+      width: 30%;
+      border-bottom: $border-width $border-style $color-grey;
+      position: absolute;
+      bottom: 30px;
+   }
+   .noAfter::after {
+      content: none;
+   }
+   .h6Mod {
+      font-family: secondary;
+      font-size: 30px;
+      color: $color-1;
+      position: relative;
+      top: -30px;
+   }
+
+   section:first-of-type p {
+      font-size: 1.25em;
+      margin: 0;
+      text-align: center;
+   }
+   .colorPink2,
+   .colorPink div p:nth-of-type(2) {
+      color: $color-1;
+      font-family: secondary;
+      font-size: 1.25rem;
+   }
+   [class*="ico-paint"],
+   [class*="ico-drop"] {
+      width: 125px;
+      height: 125px;
+   }
+
+   // $$ COLOR PALETTE
+   .ico-paint01 {
+      fill: $color-bg1;
+   }
+   .ico-paint02 {
+      fill: $color-txt1;
+   }
+   .ico-paint03 {
+      fill: $color-bg2;
+   }
+   .ico-paint04 {
+      fill: $color-txt2;
+   }
+   .ico-paint05 {
+      fill: $color-bg3;
+   }
+   .ico-paint06 {
+      fill: $color-txt3;
+   }
+
+   .ico-paint07 {
+      fill: $color-1;
+   }
+   .ico-paint08 {
+      fill: $color-2;
+   }
+   .ico-paint09 {
+      fill: $color-3;
+   }
+   .ico-paint10 {
+      fill: $color-4;
+   }
+   .ico-paint11 {
+      fill: $color-5;
+   }
+   .ico-paint12 {
+      fill: $color-6;
+   }
+   .ico-paint13 {
+      fill: $color-7;
+   }
+   .ico-paint14 {
+      fill: $color-8;
+   }
+
+   // $$ COLOR PALETTE COMPLEMENTARY
+   .ico-paintInfo {
+      fill: $color-info;
+   }
+   .ico-paintSuccess {
+      fill: $color-success;
+   }
+   .ico-paintWarning {
+      fill: $color-warning;
+   }
+   .ico-paintError {
+      fill: $color-error;
+   }
+   .ico-paintWhite {
+      fill: $color-white;
+   }
+   .ico-paintBlack {
+      fill: $color-black;
+   }
+   .ico-paintGrey {
+      fill: $color-grey;
+   }
+
+   // $$ EXTRA COLORS
+   .ico-dropGrey {
+      fill: $colorResin-grey;
+   }
+   .ico-dropCastWax {
+      fill: $colorResin-castWax;
+   }
+   .ico-dropDurable {
+      fill: $colorResin-durable;
+   }
+   .ico-dropTough {
+      fill: $colorResin-tough;
+   }
+   .ico-dropHighTemp {
+      fill: $colorResin-highTemp;
+   }
+   .ico-dropElastic {
+      fill: $colorResin-elastic;
+   }
+   .ico-dropFlexible {
+      fill: $colorResin-flexible;
+   }
+   .ico-dropDraft {
+      fill: $colorResin-draft;
+   }
+   .ico-dropWhite {
+      fill: $colorResin-white;
+   }
+   .ico-dropBlack {
+      fill: $colorResin-black;
+   }
+
+   // TYPOGRAPHY
+   p span {
+      color: $color-1;
+   }
+
+   .typoPrincipal {
+      font-family: principal;
+   }
+   .typoSecondary {
+      font-family: secondary;
+   }
+   .typoComplementary {
+      font-family: complementary;
+   }
+
+   .colorInvert {
+      h1, h2, h3, h4, h5, h6 {
+         color: $color-1;
+      }
+      p {
+         color: $color-black;
+      }
+   }
+
+   .error {
+      color: $color-error;
+      ::placeholder {
+         color: $color-error;
+      }
+      &::before {
+         content: "";
+         display: block;
+         width: $border-width;
+         height: 2em;
+         background-color: $color-error;
+         position: absolute;
+         top: 2.8rem;
+         left: 0;
+      }
+      &::after {
+         content: "";
+         display: block;
+         width: 105%;
+         height: $border-width;
+         background-color: $color-error;
+         position: absolute;
+         top: 4.37rem;
+         left: -.44rem;
+      }
+   }
+   .valid {
+      color: $color-success;
+      ::placeholder {
+         color: $color-success;
+      }
+      &::before {
+         content: "";
+         display: block;
+         width: $border-width;
+         height: 2em;
+         background-color: $color-success;
+         position: absolute;
+         top: 2.8rem;
+         left: 0;
+      }
+      &::after {
+         content: "";
+         display: block;
+         width: 105%;
+         height: $border-width;
+         background-color: $color-success;
+         position: absolute;
+         top: 4.37rem;
+         left: -.44rem;
+      }
+   }
+
+   .dark-bg1 {
+      .error {
+         color: $color-white;
+         ::placeholder {
+            background-color: $color-error;
+            padding: 1em;
+            border-radius: 10px;
+            color: $color-white;
+         }
+         &::before {
+            background-color: $color-white;
+         }
+         &::after {
+            background-color: $color-white;
+         }
+      }
+      .valid {
+         color: $color-white;
+         ::placeholder {
+            background-color: $color-success;
+            padding: 1em;
+            border-radius: 10px;
+            color: $color-white;
+         }
+         &::before {
+            background-color: $color-white;
+         }
+         &::after {
+            background-color: $color-white;
+         }
+      }
+   }
+   .dark-bg2 {
+      .error {
+         color: $color-white;
+         ::placeholder {
+            background-color: $color-black;
+            padding: 1em;
+            border-radius: 10px;
+            color: $color-white;
+         }
+         &::before {
+            background-color: $color-white;
+         }
+         &::after {
+            background-color: $color-white;
+         }
+      }
+      .valid {
+         color: $color-white;
+         ::placeholder {
+            background-color: $color-success;
+            padding: 1em;
+            border-radius: 10px;
+            color: $color-white;
+         }
+         &::before {
+            background-color: $color-white;
+         }
+         &::after {
+            background-color: $color-white;
+         }
+      }
+   }
+}

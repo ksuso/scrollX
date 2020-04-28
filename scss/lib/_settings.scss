@@ -1,0 +1,135 @@
+//VARIABLES PARA CONDICIONALES
+$include-styleguide: false;
+
+$include-reset: true;
+$include-layout: true;
+$include-utilities: true;
+$include-fonts: true;
+$include-header: true;
+$include-links: true;
+$include-buttons: true;
+$include-forms: true;
+$include-lists: true ;
+$include-btnRadio: false;
+$include-toggleButtons: false;
+$include-footer: true;
+$include-img: true;
+
+$include-dark-bg-mode: true;
+$include-dark-mode-buttons: true;
+
+
+// COLOR PALETTE
+$color-bg1: #fff;
+$color-txt1: #111;
+$color-bg2: #636363;
+$color-txt2: #fff;
+$color-bg3: #fc1662;
+$color-txt3: #fff;
+$color-1: #fc1662;
+$color-2: #e8749a;
+$color-3: #7eb283;
+$color-4: #69b8e5;
+$color-5: #252548;
+$color-6: #36428e;
+$color-7: #7a86d2;
+$color-8: #f3a9c1;
+
+// COLOR PALETTE COMPLENTARY
+$color-black: #111;
+$color-white: #fff;
+$color-grey-superdark: #232323;
+$color-grey-dark: #494949;
+$color-grey: #636363;
+$color-grey-light: #9c9c9c;
+$color-grey-superlight: #c5c5c5;
+$color-error: #ff0000;
+$color-warning: #ffaa00;
+$color-success: #16b887;
+$color-info: #40a5d9;
+
+// EXTRA COLORS
+$colorResin-black: #111;
+$colorResin-white: #fff;
+$colorResin-draft: #008ee0;
+$colorResin-flexible: #1a2e2a;
+$colorResin-elastic: #fff;
+$colorResin-highTemp: #fff0be;
+$colorResin-tough: #b1b1b1;
+$colorResin-durable: #fffde9;
+$colorResin-castWax: #bf42df;
+$colorResin-grey: #a3a3a3;
+
+
+// SITE SETTINGS
+$width: 100%;
+$max-width: 1920px;
+$min-width: 320px;
+
+$font-size: 16px;
+$line-height: 1.38em;
+
+$font-size-small: .75em;
+$line-height-small: 1.3em; 
+
+$margin-between-paragraphs: .63em;
+
+$list-style-position: inside;
+$list-style-type: none;
+
+$h1: 40px/$font-size;
+$h2: 30px/$font-size;
+$h3: 25px/$font-size;
+$h4: 22px/$font-size;
+$h5: 20px/$font-size;
+$h6: 18px/$font-size;
+
+$border-width: 2px;
+$border-style: solid;
+$border-radius: 20px;
+
+$icoWidth: 35px;
+$icoHeight: 35px;
+$icoWidth-small: 18px;
+$icoHeight-small: 18px;
+
+$transition-timeIn: .3s;
+$transition-timeOut: .5s;
+
+// BUTTONS
+$btn-paddHeight: 7px;
+$btn-paddWidth: 25px;
+$btn-font-size: 16px;
+$btn-border-radius: $border-radius;
+$btn-border-width: 2px;
+$btn-border-style: solid;
+
+// MEDIA QUERIES
+$media-xl: 1690px;
+$media-l: 1390px;
+$media-m: 1024px;
+$media-s: 768px;
+$media-xs: 590px;
+$media-xxs: 490px;
+
+// FORMS
+$input-border-width: 2px;
+$input-border-radius: 0;
+$input-paddHeight: 13px;
+$input-paddWidth: 15px;
+
+$checkbox-size: 20px;
+$checkbox-border-width: 2px;
+$checkbox-border-radius: 6px;
+$checkbox-bg-check: $color-bg3; 
+
+
+
+$z-index: (
+   subcero: -1,
+   sub: 20,
+   inf: 50,
+   normal: 100,
+   sup: 500,
+   sticky: 1000
+);

@@ -1,0 +1,28 @@
+@if $include-header == true {
+
+header {
+   @include limitMaxWidth($width, $max-width);
+   background-color: $color-bg3;
+   color: $color-txt3;
+   border-radius: 0 0 10px 10px;
+   font-size: 20/16+em;
+   .logo {
+      max-width: 226px;
+      padding: 20px;
+   }
+   .store,
+   .btnMenu {
+      width: 4%;
+      
+   }
+   .btnMenu:hover span:nth-of-type(1) {
+      padding: 20px;
+   }
+   .btnMenu:hover span:nth-of-type(2) {
+      padding: 0;
+   }
+   .btnMenu:hover span:nth-of-type(3) {
+      padding: 15px;
+   }
+}
+}

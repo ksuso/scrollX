@@ -1,0 +1,245 @@
+@if $include-forms == true {
+
+   label {
+      font-size: $font-size-small;
+      line-height: $line-height-small;
+      display: block;
+      position: relative;
+      font-family: secondary;
+      font-size: 1.25rem;
+      &:not(.mensaje):not(.resetPosition)::before {
+         content: "";
+         display: block;
+         width: $border-width;
+         height: 2em;
+         background-color: $color-grey;
+         position: absolute;
+         top: 2.3rem;
+         left: 0;
+      }
+      &:not(.mensaje):not(.resetPosition)::after {
+         content: "";
+         display: block;
+         width: 105%;
+         height: $border-width;
+         background-color: $color-grey;
+         position: absolute;
+         top: 4.37rem;
+         left: -.44rem;
+      }
+      &.mensaje {
+         &::before {
+            content: "";
+            display: block;
+            width: $border-width;
+            height: 10.5em;
+            background-color: $color-grey;
+            position: absolute;
+            top: 2.3rem;
+            left: 0;
+         }
+         &::after {
+            content: "";
+            display: block;
+            width: 105%;
+            height: $border-width;
+            background-color: $color-grey;
+            position: absolute;
+            top: 14.9rem;
+            left: -.44rem;
+         }
+      }
+   }
+
+   input,
+   textarea {
+      color: $color-black;
+      font-family: secondary;
+      font-size: $font-size;
+      width: 100%;
+      padding: $input-paddHeight $input-paddWidth;
+      margin-bottom: 10px;
+      background-color: transparent;
+   }
+   ::placeholder {
+      color: $color-grey-light;
+   }
+
+
+   // INPUT Y LABEL FONDO OSCURO
+   .dark-bg1,
+   .dark-bg2 {
+      label {
+         &:not(.mensaje):not(.resetPosition)::before {
+            background-color: $color-white;
+         }
+         &:not(.mensaje):not(.resetPosition)::after {
+            background-color: $color-white;
+         }
+         &.mensaje {
+            &::before {
+               background-color: $color-white;
+            }
+            &::after {
+               background-color: $color-white;
+            }
+         }
+      }
+      ::placeholder {
+         color: rgba($color-white, .5);
+      }
+      input,
+      textarea {
+         color: $color-white;
+      }
+   }
+
+   input[type="checkbox"],
+   input[type="radio"],
+   input[type="checkbox"] + label,
+   input[type="radio"] + label {
+      width: initial;
+      display: inline-block;
+   }
+
+// CHECKBOX Y RADIO BUTTONS PERSONALIZADOS
+   input[type="checkbox"] {
+      display: none;
+      +label {
+         position: relative;
+         cursor: pointer;
+         margin-right: 5px;
+         &::before {
+            content: "";
+            width: $checkbox-size;
+            height: $checkbox-size;
+            display: inline-block;
+            vertical-align: sub;
+            margin-right: 5px;
+            background-color: transparent;
+            border-color: $color-grey;
+            border-width: $checkbox-border-width;
+            border-style: $border-style;
+            border-radius: $checkbox-border-radius;
+            top: 0;
+            left: -12%;
+         }
+      }
+   }
+   input[type="checkbox"]:checked + label::after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      background-image: url(../img/SVG/check.svg);
+      background-repeat: no-repeat;
+      position: absolute;
+      top: -.18em;
+      left: .18em;
+   }
+
+   .dark-bg1,
+   .dark-bg2 {
+      input[type="checkbox"] {
+         +label {
+            &::before {
+               border-color: $color-white;
+            }
+         }
+      }
+      input[type="checkbox"]:checked + label::after {
+         fill: $color-white;
+      }
+   }
+
+   @if $include-btnRadio == true {
+      input[type="radio"] {
+         display: none;
+         +label {
+            position: relative;
+            cursor: pointer;
+            margin-right: 5px;
+            &::before {
+               content: "";
+               width: $checkbox-size;
+               height: $checkbox-size;
+               display: inline-block;
+               vertical-align: sub;
+               margin-right: 5px;
+               background-color: $color-white;
+               border-color: $color-grey-dark;
+               border-width: $checkbox-border-width;
+               border-style: $border-style;
+               border-radius: $checkbox-border-radius;
+            }
+         }
+      }
+      input[type="radio"] + label::before {
+         border-radius: 50%;
+      }
+      input[type="radio"]:checked + label::before {
+         background-color: $checkbox-bg-check;
+      }
+      input:not([class="toggle"])[type="radio"]:checked + label::after {
+         content: "";
+         width: $checkbox-size/2.8;
+         height: $checkbox-size/2.8;
+         border-radius: 50%;
+         background-color: $color-white;
+         position: absolute;
+         top: 7px;
+         left:7px;
+      }
+   }
+
+   // RADIO TOOGLE BUTTONS PERSONALIZADOS
+
+   @if $include-toggleButtons == true {
+      input.toggle + label {
+         padding: $input-paddHeight $input-paddWidth;
+         margin-right: 0;
+         display: table-cell;
+         text-align: center;
+         @media (max-width: $media-s){
+            padding: 10px 5px;
+         }
+         &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin-right: 0;
+            border-width: $input-border-width;
+            border-style: $border-style;
+            border-radius: 0;
+            border-color: $color-grey-dark;
+            background-color: $color-white;
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+         >span{
+            position: relative;
+            color: $color-txt1;
+            z-index: map-get($z-index, sup);
+         }
+      }
+      input.toggle:first-of-type + label::before {
+         border-radius: $border-radius 0 0 $border-radius;
+      }
+      input.toggle:last-of-type + label::before {
+         border-radius: 0 $border-radius $border-radius 0;
+      }
+      input.toggle:checked + label {
+         span {
+            text-shadow: 0 0 4px $color-white;
+            color: $color-white;
+         }
+         &::before {
+            background-color: $color-2;
+         }
+      }
+   }
+
+}
