@@ -32,7 +32,16 @@ window.addEventListener('wheel', function (e) {
 }); */
 
 var scrollBox = document.querySelector('#scrollBox');
-
-scrollBox.addEventListener('click', function() {
-   console.log('scroll')
+scrollBox.addEventListener('wheel', function(e) {
+   (e.deltaY > 0)
+      ? scrollBox.scrollLeft += 10
+      : scrollBox.scrollLeft -= 10
 });
+
+scrollBox.addEventListener('mouseover', function(){
+   document.querySelector('body').style.overflowY = 'hidden';
+})
+
+scrollBox.addEventListener('mouseleave', function(){
+   document.querySelector('body').style.overflowY = 'scroll';
+})
