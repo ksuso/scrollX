@@ -24,9 +24,15 @@ if (acordeon != null) {
 
 
 // $$ SCROLL EN X
-var item = document.getElementsByTagName('DIV')[1];
+/* var item = document.getElementsByTagName('DIV')[1];
 
 window.addEventListener('wheel', function (e) {
    if (e.deltaY > 0) item.scrollLeft += 100;
    else item.scrollLeft -= 100;
+}); */
+
+var scrollBox = document.querySelector('#scrollBox');
+
+scrollBox.addEventListener('scroll', function() {
+   console.log('scroll')
 });
