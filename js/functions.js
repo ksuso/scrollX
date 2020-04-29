@@ -33,6 +33,6 @@ window.addEventListener('wheel', function (e) {
 
 var scrollBox = document.querySelector('#scrollBox');
 
-scrollBox.addEventListener('scroll', function() {
+scrollBox.addEventListener('click', function() {
    console.log('scroll')
 });
